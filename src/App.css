@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+
+.App{
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-border{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+  height: 300px;
+  border: none;
+  padding: 10px;
+}
+
+.container-border fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  background-color: #fff;
+  width: 70%;
+  height: 70%;
+  border-radius: 5%;
+  border: solid 0.5px rgb(170, 170, 170);
+}
+
+.div-button{
+  display: flex;
+  padding-top: 5px;
+  margin-bottom: -20px;
+}
+
+.container-inputs-1-2{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5px 10px 5px
+}
+.container-inputs-3-4{
+  display: flex;
+  justify-content: space-between;
+  padding:10px 5px 20px 5px
+}
+input{
+  width: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.63);
+  outline: none;
+}
+input:hover{
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.137);
+  transition: 0.9s;
+}
+input:focus{
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.137);
+  background-color: rgb(235, 235, 235);
+}
+
+.btn-copiar{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border:none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.356);
+  width: auto;
+}
+.btn-copiar:hover{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border:none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
+  transition: 0.5s;
+  width: auto;
+}
+.btn-copiado{
+  font-size: 20px;
+  color: rgb(0, 146, 32);
+  border:none;
+  border-radius: 5px;
+  width: auto;
+}
+h1{
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+}
+
+p{
+  margin-top: -5px;
+}
+legend{
+  color: rgb(146, 146, 146);
+}
+.text-autor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  
+}
+.autor{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 18px;
+}
+@media screen and (max-width: 530px){
+  .container-border{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    border: none;
+    padding: 10px;
+  }
+}
+
+
