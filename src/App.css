@@ -124,5 +124,26 @@ legend{
     border: none;
     padding: 10px;
   }
+  input{
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.63);
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+  }
+  .btn-copiar{
+    font-size: 35px;
+    
+  }
+  .btn-copiar:hover{
+    font-size: 35px;
+    
+  }
+  .btn-copiado{
+    font-size: 35px;
+    
+  }
 }
 
