@@ -64,8 +64,8 @@ class App extends Component {
           <p className='text-autor'><i>By</i> <span className='autor'> &lt;Diego Rogers/&gt; </span></p>
         </header>
         <div className ='container-inputs-1-2'>
-          <input onChange={this.handleChange} type='text' name='Top_Left'  />
-          <input onChange={this.handleChange} type='text' name='Top_Right'/>
+          <input onChange={this.handleChange} type='number' name='Top_Left'  />
+          <input onChange={this.handleChange} type='number' name='Top_Right'/>
         </div>
         <div
           className='container-border' 
@@ -88,8 +88,8 @@ class App extends Component {
               <div className='div-button'><button className={buttonCopy}  onClick={this.handleCopy}><AiOutlineCopy/></button></div>
         </div> 
         <div className='container-inputs-3-4'>
-          <input onChange={this.handleChange} type='text' name='Bottom_Left' />
-          <input onChange={this.handleChange} type='text' name='Bottom_Right' />
+          <input onChange={this.handleChange} type='number' name='Bottom_Left' />
+          <input onChange={this.handleChange} type='number' name='Bottom_Right' />
         </div>
         
       </main>
