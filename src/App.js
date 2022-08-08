@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import { AiOutlineCopy } from 'react-icons/ai'
+import NavBar from './components/NavBar'
 
 
 class App extends Component {
@@ -22,7 +23,9 @@ class App extends Component {
       radius:0,
       css:'',
     },
-    buttonCopy: 'btn-copiar'
+    buttonCopy: 'btn-copiar',
+    textCopy:'copiar CSS',
+    textCSS:'textBlack'
   }
   
       handleChange = (e) => {
@@ -46,53 +49,55 @@ class App extends Component {
         const { Top_Left, Top_Right, Bottom_Left, Bottom_Right } = this.state
         const texto = `${Top_Left.css} ${Top_Right.css} ${Bottom_Left.css} ${Bottom_Right.css}`.replace(/\s/g, "\n")
         if (navigator.clipboard.writeText(texto)){
-          this.setState({buttonCopy: 'btn-copiado'}, () =>{
+          this.setState({buttonCopy: 'btn-copiado', textCopy:'copiado!', textCSS:'textGreen'}, () =>{
             setTimeout(() => {
-              this.setState({buttonCopy:'btn-copiar'})
+              this.setState({buttonCopy:'btn-copiar', textCopy:'copiar CSS', textCSS:'textBlack'})
             }, 2000);
           })
         }
       }
       
   render(){
-    const { Top_Left, Top_Right, Bottom_Left, Bottom_Right, buttonCopy } = this.state
+    const { Top_Left, Top_Right, Bottom_Left, Bottom_Right, buttonCopy, textCopy, textCSS } = this.state
     
     return (
-      <main className="App">
-        <header>
-          <h1>Border Radius</h1>
-          <p className='text-autor'><i>By</i> <span className='autor'> &lt;Diego Rogers/&gt; </span></p>
-        </header>
-        <div className ='container-inputs-1-2'>
-          <input onChange={this.handleChange} type='number' name='Top_Left'  />
-          <input onChange={this.handleChange} type='number' name='Top_Right'/>
-        </div>
-        <div
-          className='container-border' 
-          style={{
-            overflow:'hidden', 
-            backgroundColor: '#d1d1d1',
-            borderTopLeftRadius:Number(Top_Left.radius),
-            borderTopRightRadius:Number(Top_Right.radius),
-            borderBottomLeftRadius:Number(Bottom_Left.radius),
-            borderBottomRightRadius:Number(Bottom_Right.radius),
-            
-          }}>
-            <fieldset >
-            <legend>CSS</legend>
-              <p>{Top_Left.css}</p>
-              <p>{Top_Right.css}</p>
-              <p>{Bottom_Left.css}</p>
-              <p>{Bottom_Right.css}</p>
-            </fieldset>
-              <div className='div-button'><button className={buttonCopy}  onClick={this.handleCopy}><AiOutlineCopy/></button></div>
-        </div> 
-        <div className='container-inputs-3-4'>
-          <input onChange={this.handleChange} type='number' name='Bottom_Left' />
-          <input onChange={this.handleChange} type='number' name='Bottom_Right' />
-        </div>
+      
+        <section className="App">
+        <NavBar />
+          <header>
+            <h1>Border Radius</h1>
+           
+          </header>
+            <div className ='container-inputs-1-2'>
+              <input onChange={this.handleChange} type='number' name='Top_Left'  />
+              <input onChange={this.handleChange} type='number' name='Top_Right'/>
+            </div>
+          <div
+            className='container-border'
+            style={{
+              overflow:'hidden',
+              backgroundColor: '#d1d1d1',
+              borderTopLeftRadius:Number(Top_Left.radius),
+              borderTopRightRadius:Number(Top_Right.radius),
+              borderBottomLeftRadius:Number(Bottom_Left.radius),
+              borderBottomRightRadius:Number(Bottom_Right.radius),
+              
+            }}>
+              <fieldset >
+              <legend>CSS</legend>
+                <p>{Top_Left.css}</p>
+                <p>{Top_Right.css}</p>
+                <p>{Bottom_Left.css}</p>
+                <p>{Bottom_Right.css}</p>
+              </fieldset>
+                <div className='div-button'><button className={buttonCopy}  onClick={this.handleCopy}><AiOutlineCopy className='icon-copy'/></button> <span className={textCSS}>{textCopy}</span> </div>
+          </div>
+          <div className='container-inputs-3-4'>
+            <input onChange={this.handleChange} type='number' name='Bottom_Left' />
+            <input onChange={this.handleChange} type='number' name='Bottom_Right' />
+          </div>
         
-      </main>
+        </section>
     );
   }
 }
