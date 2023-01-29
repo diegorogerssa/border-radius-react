@@ -30,9 +30,9 @@ mudarClasseClose = () => {
         
         <nav id='nav-container' className = { menu }>
           <ul>
-            <li><a className='nav-bar-link' href='https://diegorogers.herokuapp.com/'>&lt; Home /&gt;</a></li>
-            <li><a className='nav-bar-link'href='https://diegorogers.herokuapp.com/projetos'>&lt; Projetos /&gt;</a></li>
-            <li><a className='nav-bar-link'href='https://diegorogers.herokuapp.com/sobre'>&lt; Sobre mim /&gt;</a></li>
+            <li><a className='nav-bar-link' href='#'>&lt; Home /&gt;</a></li>
+            <li><a className='nav-bar-link'href='#'>&lt; Projetos /&gt;</a></li>
+            <li><a className='nav-bar-link'href='#'>&lt; Sobre mim /&gt;</a></li>
             <button onClick={this.mudarClasseClose} className='icon-btn-close' ><GrClose/></button>
           </ul>
       </nav>

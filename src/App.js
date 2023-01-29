@@ -30,7 +30,6 @@ class App extends Component {
   
       handleChange = (e) => {
         const { value, name } = e.target;
-        const { Top_Left, Top_Right, Bottom_Left, Bottom_Right } = this.state
         const lower = name.toLowerCase().replace('_', '-') 
         console.log(lower);
         if(value > 100){
